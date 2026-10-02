@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "url": "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?fm=jpg&q=60&w=3000&auto=format&fit=crop",
+      "alt": "Woman lying with white cream mask on face during spa facial"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1731514771613-991a02407132?fm=jpg&q=60&w=3000&auto=format&fit=crop",
+      "alt": "Woman getting a relaxing facial mask treatment"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1639162906614-0603b0ae95fd?fm=jpg&q=60&w=3000&auto=format&fit=crop",
+      "alt": "Woman getting a soothing back massage at the spa"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1775133262667-316bd4d9e5b5?fm=jpg&q=60&w=3000&auto=format&fit=crop",
+      "alt": "Therapist massaging a client's back with warm herbal compress balls"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1719858511928-94db73c8de67?fm=jpg&q=60&w=3000&auto=format&fit=crop",
+      "alt": "Row of relaxing hot tubs at a day spa"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1559185590-fcf099ac62c5?fm=jpg&q=60&w=3000&auto=format&fit=crop",
+      "alt": "Calming spa massage room decorated in pink and white"
+    }
+  ],
+  "source": "ai_search"
+}
