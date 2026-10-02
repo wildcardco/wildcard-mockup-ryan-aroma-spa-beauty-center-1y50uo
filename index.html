@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aroma Spa &amp; Beauty Center · Day Spa in Mokena, IL</title>
+<meta name="description" content="Aroma Spa & Beauty Center is a neighborhood day spa on LaGrange Rd in Mokena, IL offering massage, facials, body treatments, waxing, and nail care under one roof.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --eucalyptus:#26332b;
+    --eucalyptus-deep:#1b241f;
+    --eucalyptus-soft:#3a4a40;
+    --sandstone:#cdb391;
+    --sandstone-deep:#b99c78;
+    --terracotta:#8f4f38;
+    --terracotta-soft:#a8664c;
+    --cream:#efe4d2;
+    --ink:#2a2620;
+    --serif:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+    --sans:"Nunito Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans);
+    font-weight:300;
+    font-size:1.0625rem;
+    line-height:1.75;
+    color:var(--cream);
+    background:var(--eucalyptus);
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit}
+  img{display:block;max-width:100%}
+  /* Empty photo slots keep their warm color field until a real photo is added */
+  img[data-photo-query]:not([src]){opacity:0}
+
+  h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spacing:-0.005em}
+
+  .wrap{width:min(1180px,100% - 2.75rem);margin-inline:auto}
+
+  .skip{position:absolute;left:-999px;top:0;background:var(--cream);color:var(--ink);padding:.6rem 1rem;z-index:20}
+  .skip:focus{left:1rem;top:1rem}
+
+  /* Header */
+  .site-head{
+    position:absolute;inset:0 0 auto 0;z-index:5;
+    padding:1.5rem 0;
+  }
+  .site-head .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+  .brand{font-family:var(--serif);font-size:1.35rem;text-decoration:none;letter-spacing:.01em}
+  .brand span{display:block;font-family:var(--sans);font-size:.72rem;letter-spacing:.22em;text-transform:lowercase;opacity:.8;margin-top:.1rem}
+  .head-nav{display:none;gap:2rem;font-size:.92rem;text-transform:lowercase}
+  .head-nav a{text-decoration:none;opacity:.85;border-bottom:1px solid transparent;padding-bottom:2px}
+  .head-nav a:hover,.head-nav a:focus-visible{opacity:1;border-color:currentColor}
+  .head-call{font-size:.9rem;text-decoration:none;text-transform:lowercase;opacity:.9}
+
+  /* Hero */
+  .hero{
+    position:relative;min-height:100svh;
+    display:flex;align-items:flex-end;
+    background:radial-gradient(ellipse at 70% 30%, #4a4134 0%, #2c2a23 45%, var(--eucalyptus-deep) 100%);
+    overflow:hidden;
+  }
+  .hero figure{position:absolute;inset:0}
+  .hero figure img{width:100%;height:100%;object-fit:cover}
+  .hero::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(27,36,31,.55) 0%, rgba(27,36,31,.15) 35%, rgba(27,36,31,.75) 100%);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative;z-index:2;width:100%;padding:8rem 0 7.5rem}
+  .hero h1{font-size:clamp(2.9rem,10vw,7rem);max-width:12ch;color:var(--cream)}
+  .hero p{max-width:34ch;margin-top:1.5rem;font-size:1.1rem;opacity:.88;text-transform:lowercase}
+  .hero-corner{
+    position:absolute;z-index:3;right:1.375rem;bottom:1.75rem;
+    text-align:right;font-size:.85rem;text-transform:lowercase;line-height:1.5;
+  }
+  .hero-corner a{
+    display:inline-block;text-decoration:none;
+    border-bottom:1px solid rgba(239,228,210,.55);padding-bottom:3px;
+    transition:border-color .4s ease;
+  }
+  .hero-corner a:hover,.hero-corner a:focus-visible{border-color:var(--cream)}
+  .hero-corner small{display:block;opacity:.7;font-size:.78rem;margin-top:.25rem}
+
+  /* Intro on sandstone */
+  .intro{background:var(--sandstone);color:var(--ink);padding:6rem 0}
+  .intro .wrap{display:grid;gap:2.5rem}
+  .intro h2{font-size:clamp(2.1rem,6vw,3.6rem);max-width:16ch}
+  .intro .lede{font-size:1.15rem;max-width:42ch}
+  .intro .lede + p{margin-top:1.2rem;max-width:42ch}
+  .rating{
+    display:flex;align-items:baseline;gap:.9rem;
+    margin-top:2.25rem;padding-top:1.5rem;border-top:1px solid rgba(42,38,32,.25);
+    max-width:28rem;
+  }
+  .rating strong{font-family:var(--serif);font-weight:500;font-size:2.8rem;line-height:1}
+  .rating span{font-size:.95rem;text-transform:lowercase}
+
+  /* Services */
+  .services{padding:6rem 0 3rem;background:var(--eucalyptus)}
+  .section-head{max-width:40rem;margin-bottom:4rem}
+  .section-head h2{font-size:clamp(2.2rem,6vw,3.8rem)}
+  .section-head p{margin-top:1rem;opacity:.85;max-width:38ch}
+  .service{display:grid;gap:1.75rem;padding-bottom:4.5rem}
+  .service figure{
+    aspect-ratio:4/5;background:var(--eucalyptus-soft);overflow:hidden;
+  }
+  .service:nth-child(even) figure{background:#5a4a3c}
+  .service figure img{width:100%;height:100%;object-fit:cover}
+  .service h3{font-size:clamp(1.9rem,5vw,2.8rem)}
+  .service .kicker{font-size:.82rem;letter-spacing:.18em;text-transform:lowercase;color:var(--sandstone);margin-bottom:.6rem}
+  .service p{margin-top:1rem;max-width:38ch;opacity:.88}
+
+  /* Under one roof — terracotta */
+  .roof{background:var(--terracotta);color:var(--cream);padding:6rem 0}
+  .roof .wrap{display:grid;gap:2.5rem}
+  .roof h2{font-size:clamp(2.2rem,6vw,3.8rem);max-width:14ch}
+  .roof ul{list-style:none;display:grid;gap:1.4rem}
+  .roof li{padding-top:1.1rem;border-top:1px solid rgba(239,228,210,.35)}
+  .roof li h3{font-size:1.6rem}
+  .roof li p{margin-top:.3rem;opacity:.9;max-width:40ch}
+
+  /* Visit */
+  .visit{background:var(--sandstone);color:var(--ink);padding:6rem 0}
+  .visit .wrap{display:grid;gap:3rem}
+  .visit h2{font-size:clamp(2.3rem,7vw,4.4rem);max-width:12ch}
+  .visit .lede{margin-top:1.25rem;max-width:36ch;font-size:1.1rem}
+  .visit figure{aspect-ratio:3/2;background:var(--sandstone-deep);overflow:hidden}
+  .visit figure img{width:100%;height:100%;object-fit:cover}
+  .contact dl{display:grid;gap:1.6rem;margin-top:2rem}
+  .contact dt{font-size:.8rem;letter-spacing:.18em;text-transform:lowercase;opacity:.75}
+  .contact dd{font-family:var(--serif);font-size:1.6rem;line-height:1.3;margin-top:.15rem}
+  .contact dd a{text-decoration:none;border-bottom:1px solid rgba(42,38,32,.35)}
+  .contact dd a:hover,.contact dd a:focus-visible{border-color:var(--ink)}
+  .btn{
+    display:inline-block;margin-top:2.5rem;
+    background:var(--eucalyptus);color:var(--cream);
+    padding:1rem 1.8rem;border-radius:3px;
+    text-decoration:none;font-weight:400;text-transform:lowercase;letter-spacing:.04em;
+    transition:background .4s ease;
+  }
+  .btn:hover,.btn:focus-visible{background:var(--eucalyptus-deep)}
+  .btn-quiet{
+    display:inline-block;margin:1rem 0 0 0;font-size:.95rem;text-transform:lowercase;
+  }
+  .areas{margin-top:2.5rem;font-size:.95rem;max-width:40ch}
+
+  /* Footer */
+  footer{background:var(--eucalyptus-deep);color:var(--cream);padding:3.5rem 0 3rem;font-size:.9rem}
+  footer .wrap{display:grid;gap:1.5rem}
+  footer .f-brand{font-family:var(--serif);font-size:1.5rem}
+  footer p{opacity:.8}
+  footer a{text-decoration:none;border-bottom:1px solid rgba(239,228,210,.35)}
+
+  :focus-visible{outline:2px solid var(--sandstone);outline-offset:3px}
+
+  @media (min-width:760px){
+    .head-nav{display:flex}
+    .intro .wrap{grid-template-columns:1fr 1fr;align-items:start}
+    .service{grid-template-columns:5fr 6fr;align-items:center;gap:4rem}
+    .service:nth-child(even) figure{order:2}
+    .service figure{aspect-ratio:4/5}
+    .roof .wrap{grid-template-columns:1fr 1.2fr;align-items:start}
+    .visit .wrap{grid-template-columns:1fr 1fr;align-items:start}
+    .hero-corner{right:2.5rem;bottom:2.5rem}
+    footer .wrap{grid-template-columns:1fr auto;align-items:end}
+  }
+  @media (min-width:1100px){
+    .service:nth-child(odd) .service-copy{padding-right:3rem}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *{transition:none!important}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top">Aroma Spa &amp; Beauty Center<span>a day spa in mokena</span></a>
+    <nav class="head-nav" aria-label="Primary">
+      <a href="#about">about</a>
+      <a href="#services">treatments</a>
+      <a href="#visit">visit</a>
+    </nav>
+    <a class="head-call" href="tel:+17089955161">(708) 995-5161</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <figure>
+      <img data-photo-query="soft steam rising over folded linen towels in a dim warm spa room" alt="soft steam rising over folded linen towels in a dim warm spa room">
+    </figure>
+    <div class="hero-inner wrap">
+      <h1 id="hero-title">Slow down. You're close to home.</h1>
+      <p>an unhurried neighborhood day spa on lagrange road — massage, skincare, and beauty care, all under one roof.</p>
+    </div>
+    <div class="hero-corner">
+      <a href="tel:+17089955161">book an appointment</a>
+      <small>call (708) 995-5161</small>
+    </div>
+  </section>
+
+  <section class="intro" id="about" aria-labelledby="about-title">
+    <div class="wrap">
+      <h2 id="about-title">A trusted escape for the people who come back.</h2>
+      <div>
+        <p class="lede">Aroma Spa &amp; Beauty Center is a neighborhood day spa in Mokena — the kind of place regulars return to for consistent, quality care without driving into the city.</p>
+        <p>Come in for a regular reset, a special-occasion visit, or an afternoon with someone you love. We keep the pace gentle, so you can leave the parking lot behind the moment you walk through the door.</p>
+        <div class="rating" aria-label="Rated 4.3 out of 5 from more than 180 reviews">
+          <strong>4.3</strong>
+          <span>rating from 180+ reviews by local guests</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services" aria-labelledby="services-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="services-title">The treatment menu</h2>
+        <p>Five ways to rest, restore, and feel looked after — chosen around what you need today.</p>
+      </div>
+
+      <article class="service">
+        <figure>
+          <img data-photo-query="therapist giving a relaxing back massage in a softly lit spa room" alt="therapist giving a relaxing back massage in a softly lit spa room">
+        </figure>
+        <div class="service-copy">
+          <p class="kicker">relaxation &amp; therapeutic</p>
+          <h3>Massage therapy</h3>
+          <p>From slow, soothing relaxation work to focused therapeutic massage for tension that's been building all week. Tell us how you're feeling and we'll take it from there.</p>
+        </div>
+      </article>
+
+      <article class="service">
+        <figure>
+          <img data-photo-query="esthetician applying a gentle facial mask in a warm spa treatment room" alt="esthetician applying a gentle facial mask in a warm spa treatment room">
+        </figure>
+        <div class="service-copy">
+          <p class="kicker">personalized skincare</p>
+          <h3>Facials &amp; skincare</h3>
+          <p>Skincare treatments shaped around your skin, not a one-size routine. A quiet hour to cleanse, nourish, and simply breathe.</p>
+        </div>
+      </article>
+
+      <article class="service">
+        <figure>
+          <img data-photo-query="warm body treatment with natural scrub and towels at a day spa" alt="warm body treatment with natural scrub and towels at a day spa">
+        </figure>
+        <div class="service-copy">
+          <p class="kicker">head to toe</p>
+          <h3>Body treatments</h3>
+          <p>Full-body care that leaves skin soft and the mind settled — a lovely choice on its own or paired with a massage.</p>
+        </div>
+      </article>
+
+      <article class="service">
+        <figure>
+          <img data-photo-query="clean calm waxing treatment room with neatly folded towels" alt="clean calm waxing treatment room with neatly folded towels">
+        </figure>
+        <div class="service-copy">
+          <p class="kicker">smooth &amp; simple</p>
+          <h3>Waxing</h3>
+          <p>Careful, comfortable waxing in a private, calm setting — easy to fit into your regular routine.</p>
+        </div>
+      </article>
+
+      <article class="service">
+        <figure>
+          <img data-photo-query="manicure in progress with neutral nail polish at a spa nail station" alt="manicure in progress with neutral nail polish at a spa nail station">
+        </figure>
+        <div class="service-copy">
+          <p class="kicker">beauty services</p>
+          <h3>Nail care</h3>
+          <p>Manicures, pedicures, and beauty touches to finish your visit — or to get ready for the occasion ahead.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="roof" aria-labelledby="roof-title">
+    <div class="wrap">
+      <h2 id="roof-title">Everything in one place, a few minutes away.</h2>
+      <ul>
+        <li>
+          <h3>A full spa &amp; beauty menu</h3>
+          <p>Massage, skincare, body treatments, waxing, and nails under one roof — no hopping between appointments across town.</p>
+        </li>
+        <li>
+          <h3>Care that remembers you</h3>
+          <p>Many of our guests are regulars. We get to know your preferences so each visit feels familiar and easy.</p>
+        </li>
+        <li>
+          <h3>Thoughtful gift visits</h3>
+          <p>Treat a friend, a partner, or your mom to a spa day — or plan one together as a couple.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="visit" id="visit" aria-labelledby="visit-title">
+    <div class="wrap">
+      <div class="contact">
+        <h2 id="visit-title">Whenever you're ready.</h2>
+        <p class="lede">Call to book your appointment. We'll help you choose a treatment and find a time that suits you.</p>
+        <dl>
+          <div>
+            <dt>phone</dt>
+            <dd><a href="tel:+17089955161">(708) 995-5161</a></dd>
+          </div>
+          <div>
+            <dt>address</dt>
+            <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=19836+LaGrange+Rd+Mokena+IL+60448">19836 LaGrange Rd<br>Mokena, IL 60448</a></dd>
+          </div>
+        </dl>
+        <a class="btn" href="tel:+17089955161">Call to book</a><br>
+        <a class="btn-quiet" href="https://www.google.com/maps/search/?api=1&amp;query=19836+LaGrange+Rd+Mokena+IL+60448">get directions</a>
+        <p class="areas">Welcoming guests from Mokena, New Lenox, Frankfort, Orland Park, Tinley Park, and the surrounding southwest suburbs.</p>
+      </div>
+      <figure>
+        <img data-photo-query="calm day spa reception area with warm lighting and plants" alt="calm day spa reception area with warm lighting and plants">
+      </figure>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <p class="f-brand">Aroma Spa &amp; Beauty Center</p>
+      <p>19836 LaGrange Rd, Mokena, IL 60448 · <a href="tel:+17089955161">(708) 995-5161</a></p>
+    </div>
+    <div>
+      <p>&copy; 2026 Aroma Spa &amp; Beauty Center</p>
+      <p>Website sample by Wild Card Creative Co</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
